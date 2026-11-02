@@ -1,8 +1,26 @@
 /* Offline shell + installability for the Tank.io PWA. */
 /* global self, caches, fetch, Response, URL */
-const CACHE = "tank-preview-v1";
+const CACHE = "tank-preview-v2";
+const CORE = [
+  "./",
+  "./index.html",
+  "./manifest.webmanifest",
+  "./icons/favicon-32.png",
+  "./icons/icon-180.png",
+  "./icons/icon-192.png",
+  "./icons/icon-512.png",
+  "./icons/icon-maskable-512.png",
+];
 
-self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches
+      .open(CACHE)
+      .then((cache) => cache.addAll(CORE))
+      .catch(() => undefined)
+      .then(() => self.skipWaiting()),
+  );
+});
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
