@@ -1,0 +1,1 @@
+export{t as GameRenderer}from"./render-Dgpls4wQ.js";
