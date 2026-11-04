@@ -1,7 +1,7 @@
 {
-  "name": "Tank.io — City Crusher",
-  "short_name": "Tank.io",
-  "description": "Grow, ram and crush the city in a browser tank game.",
+  "name": "War Tanks — City Crusher",
+  "short_name": "War Tanks",
+  "description": "Grow, ram and crush the city in War Tanks.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

@@ -2,7 +2,7 @@
 
 **There are no audio files in this project.**
 
-Every sound in Tank.io is synthesised at runtime with the Web Audio API (oscillators, filtered
+Every sound in War Tanks is synthesised at runtime with the Web Audio API (oscillators, filtered
 white noise, gain envelopes). Nothing is sampled, so there is nothing to license and no binary
 assets to ship.
 

@@ -1,6 +1,6 @@
-/* Offline shell + installability for the Tank.io PWA. */
+/* Offline shell + installability for the War Tanks PWA. */
 /* global self, caches, fetch, Response, URL */
-const CACHE = "tank-preview-v2";
+const CACHE = "war-tanks-v1";
 const CORE = [
   "./",
   "./index.html",
