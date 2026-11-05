@@ -1,0 +1,1 @@
+export{t as GameRenderer}from"./render-bdCr4FW1.js";
