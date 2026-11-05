@@ -1,0 +1,151 @@
+/*
+ * Text pages (about, how to play, privacy, contact) and the home page's "about the game"
+ * section. Plain CSS with no build step: these pages are static files in public/.
+ */
+:root {
+  color-scheme: dark;
+  --site-bg: #1d2030;
+  --site-card: #262a3a;
+  --site-line: #3b4159;
+  --site-text: #e9ecf5;
+  --site-dim: #b0b6cb;
+  --site-accent: #ffc83d;
+  --site-link: #6ccbff;
+}
+
+.site-page {
+  margin: 0;
+  background: var(--site-bg);
+  color: var(--site-text);
+  font:
+    16px/1.65 ui-rounded,
+    "Nunito",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+}
+
+.site-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--site-line);
+  font-weight: 700;
+}
+
+.site-wrap .site-nav .site-brand {
+  margin-right: auto;
+  color: var(--site-accent);
+  font-family: "Arial Black", Impact, system-ui, sans-serif;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.site-wrap .site-nav a {
+  color: var(--site-dim);
+  text-decoration: none;
+}
+
+.site-wrap .site-nav a:hover,
+.site-wrap .site-nav a[aria-current="page"] {
+  color: var(--site-text);
+}
+
+.site-wrap h1 {
+  margin: 28px 0 8px;
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: 1.15;
+}
+
+.site-wrap h2 {
+  margin: 32px 0 8px;
+  font-size: 22px;
+  line-height: 1.25;
+}
+
+.site-wrap h3 {
+  margin: 20px 0 4px;
+  font-size: 17px;
+}
+
+.site-wrap p,
+.site-wrap li {
+  color: var(--site-text);
+}
+
+.site-wrap a {
+  color: var(--site-link);
+}
+
+.site-lead {
+  color: var(--site-dim) !important;
+  font-size: 18px;
+}
+
+.site-cta {
+  display: inline-block;
+  margin: 12px 0;
+  padding: 12px 22px;
+  border-radius: 12px;
+  background: var(--site-accent);
+  color: #2a2310 !important;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.site-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+}
+
+.site-wrap th,
+.site-wrap td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--site-line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.site-wrap td:first-child {
+  white-space: nowrap;
+}
+
+.site-wrap kbd {
+  padding: 1px 6px;
+  border: 1px solid var(--site-line);
+  border-radius: 6px;
+  background: var(--site-card);
+  font:
+    600 14px ui-monospace,
+    monospace;
+}
+
+.site-footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--site-line);
+  color: var(--site-dim);
+  font-size: 14px;
+}
+
+.site-footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 8px;
+}
+
+.site-wrap .site-footer a {
+  color: var(--site-dim);
+}
