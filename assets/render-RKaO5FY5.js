@@ -1,0 +1,1 @@
+export{t as GameRenderer}from"./render-B3Fa_ds7.js";
