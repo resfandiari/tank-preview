@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>War Tanks — City Crusher</title>
     <meta name="description" content="War Tanks — grow, ram and crush the city in a browser tank game." />
     <meta name="theme-color" content="#bfe4ff" />
@@ -15,8 +12,15 @@
     <meta property="og:title" content="War Tanks — City Crusher" />
     <meta property="og:description" content="Grow, ram and crush the city in a browser tank game." />
     <meta property="og:url" content="https://wartanks.fun/" />
-    <meta property="og:image" content="https://wartanks.fun/icons/icon-512.png" />
+    <meta property="og:image" content="https://wartanks.fun/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="A blue tank squad advancing through a city in War Tanks." />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="War Tanks — City Crusher" />
+    <meta name="twitter:description" content="Grow, ram and crush the city in a browser tank game." />
+    <meta name="twitter:image" content="https://wartanks.fun/og.jpg" />
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png" />
     <link rel="apple-touch-icon" href="icons/icon-180.png" />
@@ -24,11 +28,25 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="War Tanks" />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4995070198242661"
-      crossorigin="anonymous"
-    ></script>
+    <!-- ads:start (removed from portal bundles, see vite.config.ts) -->
+    <script>
+      // AdSense is the heaviest third-party script on the page and competes with the menu's
+      // first paint (the largest contentful element), so it loads after the page has rendered.
+      (() => {
+        const load = () => {
+          const script = document.createElement("script");
+          script.async = true;
+          script.crossOrigin = "anonymous";
+          script.src =
+            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4995070198242661";
+          document.head.appendChild(script);
+        };
+        const schedule = () => requestAnimationFrame(load);
+        if (document.readyState === "complete") schedule();
+        else window.addEventListener("load", schedule, { once: true });
+      })();
+    </script>
+    <!-- ads:end -->
     <script type="module" crossorigin src="/tank-preview/assets/index-CUBbd5zD.js"></script>
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/src-BE2yTG3E.js">
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/quality-DgMgzYb0.js">
@@ -45,6 +63,13 @@
     <canvas id="menu-scene" aria-hidden="true"></canvas>
     <canvas id="scene"></canvas>
     <!-- site-info:start (removed from portal bundles, see vite.config.ts) -->
+    <noscript>
+      <style>#site-info{display:block}</style>
+      <p>
+        War Tanks is a free 3D tank game you play in the browser with JavaScript enabled. Read
+        <a href="how-to-play/">how to play</a> or learn <a href="about/">about the game</a>.
+      </p>
+    </noscript>
     <div id="site-info">
       <main class="site-info-body">
         <h1>War Tanks — City Crusher</h1>
@@ -103,6 +128,34 @@
         <p>© 2026 War Tanks · wartanks.fun</p>
       </footer>
     </div>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "VideoGame",
+            "name": "War Tanks — City Crusher",
+            "url": "https://wartanks.fun/",
+            "image": "https://wartanks.fun/og.jpg",
+            "description": "A free 3D browser tank game: grow by collecting ammo, ram smaller tanks and crush the whole city.",
+            "applicationCategory": "Game",
+            "genre": ["Arcade", "Action"],
+            "gamePlatform": ["Web browser", "Android", "iOS"],
+            "operatingSystem": "Any",
+            "playMode": "SinglePlayer",
+            "inLanguage": "en",
+            "isAccessibleForFree": true,
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+            "publisher": { "@type": "Organization", "name": "War Tanks", "url": "https://wartanks.fun/" }
+          },
+          {
+            "@type": "WebSite",
+            "name": "War Tanks",
+            "url": "https://wartanks.fun/"
+          }
+        ]
+      }
+    </script>
     <!-- site-info:end -->
   </body>
 </html>
