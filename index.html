@@ -47,7 +47,7 @@
       })();
     </script>
     <!-- ads:end -->
-    <script type="module" crossorigin src="/tank-preview/assets/index-CUBbd5zD.js"></script>
+    <script type="module" crossorigin src="/tank-preview/assets/index-veN_ByRQ.js"></script>
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/src-BE2yTG3E.js">
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/quality-DgMgzYb0.js">
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/platform-DyxBDgFR.js">
@@ -57,14 +57,30 @@
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/progression-DEcy7XXm.js">
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/skins-3cfGfNDx.js">
     <link rel="modulepreload" crossorigin href="/tank-preview/assets/profile-BCv_Y2Jl.js">
-    <link rel="stylesheet" crossorigin href="/tank-preview/assets/index-D0lpG8tv.css">
+    <link rel="stylesheet" crossorigin href="/tank-preview/assets/index-cDge4cCL.css">
+      <link rel="preload" as="font" type="font/woff2" href="/tank-preview/assets/bungee-latin-400-normal-Dfnurram.woff2" crossorigin />
   </head>
   <body>
     <canvas id="menu-scene" aria-hidden="true"></canvas>
     <canvas id="scene"></canvas>
+    <!-- boot-shell:start (removed from portal bundles, see vite.config.ts) -->
+    <!--
+      The menu headline ships in the HTML so the first paint no longer waits for the game
+      bundle. ui/start-screen.ts adopts this element and renders the full menu into it.
+    -->
+    <div id="start-screen">
+      <div class="menu-card screen-card">
+        <div class="menu-head">
+          <h1 data-boot="1">WAR TANKS</h1>
+          <p class="menu-sub">City Crusher</p>
+          <p class="tagline">Eat ammo. Crush the city. Don’t get crushed.</p>
+        </div>
+      </div>
+    </div>
+    <!-- boot-shell:end -->
     <!-- site-info:start (removed from portal bundles, see vite.config.ts) -->
     <noscript>
-      <style>#site-info{display:block}</style>
+      <style>html,body{height:auto;overflow:auto}#site-info{display:block}</style>
       <p>
         War Tanks is a free 3D tank game you play in the browser with JavaScript enabled. Read
         <a href="how-to-play/">how to play</a> or learn <a href="about/">about the game</a>.
